@@ -1,0 +1,12 @@
+[Unit]
+Description=Start qbittorrent cloudflared tunnel
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+ExecStart=/usr/local/bin/qbitserv
+
+[Install]
+WantedBy=multi-user.target

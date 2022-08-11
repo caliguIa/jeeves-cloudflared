@@ -1,0 +1,12 @@
+[Unit]
+Description=Start OMV6 cloudflared tunnel
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+ExecStart=/usr/local/bin/omvserv
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Start portainer cloudflared tunnel
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=20
+ExecStart=/usr/local/bin/portserv
+
+[Install]
+WantedBy=multi-user.target
